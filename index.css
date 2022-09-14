@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+html {
+  /* STYLE GUIDE */
+  --very-dark-blue-mainBG: hsl(217, 54%, 11%);
+  --very-dark-blue-cardBG: hsl(216, 50%, 16%);
+  --very-dark-blue-line: hsl(215, 32%, 27%);
+  --white: hsl(0, 0%, 100%);
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --fs-paragraph: 18px;
+  --fw-small: 300;
+  --fw-medium: 400;
+  --fw-big: 600;
+  --ff: "Outfit", sans-serif;
+  /* CUSTOM VARIABLES */
+  /* border radius variable */
+  --bradius: 10px;
+  /* space variables */
+  --space-sm: 6px;
+  --space-md: 12px;
+  --space-lg: 24px;
+}
+body {
+  font-family: var(--ff);
+  font-size: var(--fs-paragraph);
+  background-color: var(--very-dark-blue-mainBG);
+}
+.card {
+  background-color: var(--very-dark-blue-cardBG);
+  border-radius: var(--bradius);
+  padding: var(--space-md);
+  width: 25%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 0px 20px 10px hsl(217, 54%, 8%);
+}
+.card > div:first-of-type {
+  width: 100%;
+  height: 300px;
+}
+.card > div:first-of-type > img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--bradius);
+}
+.card > div:nth-of-type(2) {
+  font-size: var(--fs-paragraph);
+  /* top/bottom and left/right value */
+  margin: var(--space-lg) 0;
+}
+.card > div:nth-of-type(2) > h1 {
+  color: var(--white);
+  font-weight: var(--fw-big);
+  margin-bottom: var(--space-lg);
+}
+.card > div:nth-of-type(2) > p {
+  color: var(--soft-blue);
+  font-weight: var(--fw-small);
+  /* width: 70%; */
+}
+.card > div:nth-of-type(3) {
+  font-size: small;
+  display: flex;
+  justify-content: space-between;
+  margin: var(--space-lg) 0;
+  color: var(--soft-blue);
+}
+.card > div:nth-of-type(3) > div {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+.card > div:nth-of-type(3) > div:first-of-type {
+  color: var(--cyan);
+}
+.card > div:nth-last-of-type(2) {
+  width: 100%;
+  height: 1px;
+  background-color: var(--soft-blue);
+  border-radius: 100%;
+  margin-bottom: var(--space-lg);
+}
+.card > div:last-of-type {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+.card > div:last-of-type > img {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  border: 1px solid white;
+}
+.card > div:last-of-type > div {
+  display: flex;
+  color: var(--white);
+  gap: var(--space-sm);
+}
+.card > div:last-of-type > div > span:first-of-type {
+  color: var(--soft-blue);
+}
